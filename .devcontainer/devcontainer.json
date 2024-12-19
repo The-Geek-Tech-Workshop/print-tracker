@@ -1,0 +1,21 @@
+{
+	"name": "Node.js & TypeScript",
+	"dockerFile": "Dockerfile",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode"
+			],
+			"settings": {
+				"[javascript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode",
+					"editor.formatOnSave": true
+				}
+			}
+		}
+	},
+	"mounts": [
+    	{ "source": "aws-volume", "target": "/home/vscode/.aws", "type": "volume" }
+  	]
+}
